@@ -1,0 +1,192 @@
+/*
+ * Ordenamientos.c
+ *
+ *  Created on: 8 may. 2022
+ *      Author: JUNMI
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+#include "Ordenamientos.h"
+#include "empleado.h"
+#include "sector.h"
+
+int ordenarEmpleadosLegajoAsc(eEmpleado vec[], int tam)
+{
+    int todoOk = 0;
+    eEmpleado auxEmpleado;
+    if(vec != NULL && tam > 0)
+    {
+        for(int i=0; i < tam -1; i++)
+        {
+            for(int j= i + 1; j < tam; j++)
+            {
+                if(vec[i].legajo > vec[j].legajo)
+                {
+                    auxEmpleado = vec[i];
+                    vec[i] = vec[j];
+                    vec[j] = auxEmpleado;
+                }
+            }
+        }
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+
+int ordenarEmpleadosNombreAsc(eEmpleado vec[], int tam)
+{
+    int todoOk = 0;
+    eEmpleado auxEmpleado;
+    if(vec != NULL && tam > 0)
+    {
+        for(int i=0; i < tam -1; i++)
+        {
+            for(int j= i + 1; j < tam; j++)
+            {
+                if(strcmp(vec[i].nombre, vec[j].nombre) > 0)
+                {
+                    auxEmpleado = vec[i];
+                    vec[i] = vec[j];
+                    vec[j] = auxEmpleado;
+                }
+            }
+        }
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+
+int ordenarEmpleadosSexoAsc(eEmpleado vec[], int tam)
+{
+    int todoOk = 0;
+    eEmpleado auxEmpleado;
+    if(vec != NULL && tam > 0)
+    {
+        for(int i=0; i < tam -1; i++)
+        {
+            for(int j= i + 1; j < tam; j++)
+            {
+                if(vec[i].sexo > vec[j].sexo)
+                {
+                    auxEmpleado = vec[i];
+                    vec[i] = vec[j];
+                    vec[j] = auxEmpleado;
+                }
+            }
+        }
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+
+int ordenarEmpleados(eEmpleado vec[], int tam, int campo, int criterio)
+{
+    int todoOk = 0;
+    eEmpleado auxEmpleado; //Aca voy a guardar los datos para Swapear
+    if(vec != NULL && tam > 0 && campo >= 0 && campo <= 4 && criterio >= 0 && criterio <= 1)
+    {
+
+        for(int i=0; i < tam -1; i++)
+        {
+            for(int j= i + 1; j < tam; j++)
+            {
+                if((strcmp(vec[i].nombre, vec[j].nombre) > 0 && campo == 0 && criterio)
+				|| (strcmp(vec[i].nombre, vec[j].nombre) < 0  && campo == 0 && !criterio)
+				|| (vec[i].edad > vec[j].edad     && campo == 1 && criterio)
+				|| (vec[i].edad < vec[j].edad     && campo == 1 && !criterio)
+				|| (vec[i].legajo > vec[j].legajo && campo == 2 && criterio)
+				|| (vec[i].legajo < vec[j].legajo && campo == 2 && !criterio)
+				|| (vec[i].sexo > vec[j].sexo     && campo == 3 && criterio)
+				|| (vec[i].sexo < vec[j].sexo     && campo == 3 && !criterio)
+				|| (vec[i].sueldo > vec[j].sueldo && campo == 4 && criterio)
+				|| (vec[i].sueldo < vec[j].sueldo && campo == 4 && !criterio))
+                {
+                    auxEmpleado = vec[i];  //Swapeo la estructura entera
+                    vec[i] = vec[j];
+                    vec[j] = auxEmpleado;
+                }
+            }
+        }
+
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+
+int ordenarEmpleadosPorSexoYLegajo(eEmpleado vec[], int tam, int criterio)
+{
+    int todoOk = 0;
+    eEmpleado auxEmpleado; //Aca voy a guardar los datos para Swapear
+
+    if(vec != NULL && tam > 0)
+    {
+        for(int i=0; i < tam -1; i++)
+        {
+            for(int j= i + 1; j < tam; j++)
+            {
+                // (1) Si son del mismo sexo y estan desordenados por legajo swapeo, y con criterio
+                if(((vec[i].sexo == vec[j].sexo) && (vec[i].legajo > vec[j].legajo) && criterio) // (1)
+                ||((vec[i].sexo == vec[j].sexo) && (vec[i].legajo < vec[j].legajo) && !criterio)
+				||((vec[i].sexo != vec[j].sexo) && (vec[i].sexo > vec[j].sexo) && criterio)
+				||((vec[i].sexo != vec[j].sexo) && (vec[i].sexo < vec[j].sexo) && !criterio))  // (2)
+                	// (2) Y sino si son de distinto sexo y estan desordenados por sexo swapeo, y con criterio
+                {
+                    auxEmpleado = vec[i];  //Swapeo la estructura entera
+                    vec[i] = vec[j];
+                    vec[j] = auxEmpleado;
+                }
+
+            }
+        }
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+
+int ordenarEmpleadosPorSectorYLegajo(eEmpleado vec[], int tam, int criterio)
+{
+    int todoOk = 0;
+    eEmpleado auxEmpleado; //Aca voy a guardar los datos para Swapear
+
+    if(vec != NULL && tam > 0)
+    {
+        for(int i=0; i < tam -1; i++)
+        {
+            for(int j= i + 1; j < tam; j++)
+            {
+                // (1) Si son del mismo sector y estan desordenados por legajo swapeo, y con criterio
+                if(((vec[i].idSector == vec[j].idSector) && (vec[i].legajo > vec[j].legajo) && criterio) // (1)
+                ||((vec[i].idSector == vec[j].idSector) && (vec[i].legajo < vec[j].legajo) && !criterio)
+				||((vec[i].idSector != vec[j].idSector) && (vec[i].idSector > vec[j].idSector) && criterio)
+				||((vec[i].idSector != vec[j].idSector) && (vec[i].idSector < vec[j].idSector) && !criterio))  // (2)
+                	// (2) Y si son de distinto sector y estan desordenados por sector swapeo, y con criterio
+                {
+                    auxEmpleado = vec[i];  //Swapeo la estructura entera
+                    vec[i] = vec[j];
+                    vec[j] = auxEmpleado;
+                }
+
+            }
+        }
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+
+
+
+
+
+
+
+

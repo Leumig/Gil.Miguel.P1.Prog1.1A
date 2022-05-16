@@ -1,0 +1,60 @@
+/*
+ ============================================================================
+ Name        : 1A.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int aplicarAumento(float* precio);
+
+
+int main(void) {
+
+	float precio = 20;
+
+	aplicarAumento(&precio);
+
+	return 0;
+}
+
+int aplicarAumento(float* precio)
+{
+	float todoOk = 0;
+	float aumento = 0;
+
+
+	if(precio != NULL && precio > 0)
+	{
+		aumento = (float) (precio*5) / 100;
+
+
+		*precio = *precio + aumento;
+	}
+
+
+
+
+
+	return todoOk;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

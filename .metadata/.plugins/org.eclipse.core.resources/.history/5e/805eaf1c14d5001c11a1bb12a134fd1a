@@ -1,0 +1,174 @@
+/*
+ ============================================================================
+ Name        : Funciones.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "Validaciones.h"
+
+int contarCaracteres(char cadena[], char caracter);
+
+void reemplazarCaracteres(char* cadena, char caracter);
+
+void reemplazarVocales(char* cadena);
+
+void crearCadenaInvertida(char* cadena, char* cadenaInvertida);
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	char cadena[100];
+	//char caracter;
+	//int contadorCaracter = 0;
+	char cadenaInvertida[100];
+	//int capicua = 0;
+/*
+	printf("Ingrese cadena: ");
+	gets(cadena);
+
+	printf("Ingrese caracter a contabilizar: ");
+	scanf("%c", &caracter);
+
+	contadorCaracter = contarCaracteres(cadena, caracter);
+
+	printf("Cantidad de veces que aparece el caracter '%c' en la cadena '%s': %d\n\n", caracter, cadena, contadorCaracter);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	printf("Ingrese cadena: ");
+	fflush(stdin);
+	gets(cadena);
+
+	printf("Ingrese caracter a reemplazar: ");
+	scanf("%c", &caracter);
+
+	reemplazarCaracteres(cadena, caracter);
+
+	printf("Cadena con el caracter '%c' reemplazado por '*': %s\n\n", caracter, cadena);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	printf("Ingrese cadena: ");
+	fflush(stdin);
+	gets(cadena);
+
+	reemplazarVocales(cadena);
+
+	printf("Cadena con las vocales reemplazadas por '*': %s\n\n", cadena);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+	printf("Ingrese cadena: ");
+	fflush(stdin);
+	gets(cadena);
+
+	crearCadenaInvertida(cadena, cadenaInvertida);
+	fflush(stdin);
+	printf("Cadena invertida: %s \n", cadenaInvertida);
+	/*if(capicua == 0)
+	{
+		printf("La cadena es capicua (se lee igual hacia atras)\n\n");
+	}*/
+
+
+	return 0;
+}
+
+int contarCaracteres(char cadena[], char caracter)
+{
+	int contadorCaracter = 0;
+
+	for(int i = 0; i < strlen(cadena); i++)
+	{
+		if(cadena[i] == caracter)
+		{
+			contadorCaracter++;
+		}
+	}
+
+	return contadorCaracter;
+
+}
+
+void reemplazarCaracteres(char* cadena, char caracter)
+{
+	char caracterNuevo = '*';
+	for(int i = 0; i < strlen(cadena); i++)
+	{
+		if(cadena[i] == caracter)
+		{
+			cadena[i] = caracterNuevo;
+		}
+	}
+
+}
+
+void reemplazarVocales(char* cadena)
+{
+	char caracterNuevo = '*';
+	//strupr(cadena[i]);
+
+	for(int i = 0; i < strlen(cadena); i++)
+	{
+		if(cadena[i] == 'A' || cadena[i] == 'E' || cadena[i] == 'I' || cadena[i] == 'O' || cadena[i] == 'U'
+		|| cadena[i] == 'a' || cadena[i] == 'e' || cadena[i] == 'i' || cadena[i] == 'o' || cadena[i] == 'u')
+		{
+			cadena[i] = caracterNuevo;
+		}
+	}
+
+}
+
+void crearCadenaInvertida(char* cadena, char* cadenaInvertida)
+{
+	int tam = strlen(cadena);
+	int j = 0;
+	//char nuevaCadena[100];
+
+	//char caracterNuevo;
+	//*capicua = 0;
+
+	for(int i = tam - 1; i >= 0; i--)
+	{
+		//caracterNuevo = cadena[i];
+		cadenaInvertida[j] = cadena[i];
+		j++;
+	}
+	//int i = (strlen(cadena) - 1);
+	//while(i>=0)
+	//{
+	//	printf("%c", cadena[i--]);
+	//}
+
+
+	/*while(cadena[i] < strlen(cadena))
+	{
+
+	}*/
+
+
+	/*
+	if(strcmpi(cadena, nuevaCadena) == 0)
+	{
+		*capicua = 1;
+	}
+*/
+	//fflush(stdin);
+
+}
+
+
+
+
+
+
+
+
+

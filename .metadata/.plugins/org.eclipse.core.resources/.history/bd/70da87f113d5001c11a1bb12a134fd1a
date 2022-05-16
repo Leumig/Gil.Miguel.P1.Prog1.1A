@@ -1,0 +1,80 @@
+/*
+ ============================================================================
+ Name        : 1A.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int aplicarAumento(float* precio);
+
+void reemplazarCaracteres(char* cadena, char caracter);
+
+
+int main(void) {
+
+	float precio = 20;
+
+	aplicarAumento(&precio);
+
+	printf("%.2f", precio);
+
+	char cadena[20] = {"Miguel"};
+
+
+	return 0;
+}
+
+int aplicarAumento(float* precio)
+{
+	float todoOk = 0;
+	float aumento = 0;
+	float num;
+	num = *precio;
+
+
+	if(precio != NULL && precio > 0)
+	{
+		aumento = (float) (num*5) / 100;
+
+
+		*precio = *precio + aumento;
+	}
+
+
+
+
+
+	return todoOk;
+}
+
+void reemplazarCaracteres(char* cadena, char caracter)
+{
+	char caracterNuevo = '*';
+	for(int i = 0; i < strlen(cadena); i++)
+	{
+		if(cadena[i] == caracter)
+		{
+			cadena[i] = caracterNuevo;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

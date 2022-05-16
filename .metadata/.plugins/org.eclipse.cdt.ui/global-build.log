@@ -1,0 +1,93 @@
+09:26:26 **** Rebuild of configuration Debug for project Gil.Miguel.P1.Prog1.1A ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Gil.Miguel.P1.Prog1.1A.o" "..\\src\\Gil.Miguel.P1.Prog1.1A.c" 
+..\src\Gil.Miguel.P1.Prog1.1A.c: In function 'aplicarAumento':
+..\src\Gil.Miguel.P1.Prog1.1A.c:36:28: error: invalid operands to binary * (have 'float *' and 'int')
+   36 |   aumento = (float) (precio*5) / 100;
+      |                            ^
+09:27:11 **** Incremental Build of configuration Debug for project Gil.Miguel.P1.Prog1.1A ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Gil.Miguel.P1.Prog1.1A.o" "..\\src\\Gil.Miguel.P1.Prog1.1A.c" 
+gcc -o Gil.Miguel.P1.Prog1.1A.exe "src\\Gil.Miguel.P1.Prog1.1A.o" 
+09:29:25 **** Incremental Build of configuration Debug for project Gil.Miguel.P1.Prog1.1A ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Funciones.o" "..\\src\\Funciones.c" 
+..\src\Funciones.c:15:10: fatal error: Validaciones.h: No such file or directory
+   15 | #include "Validaciones.h"
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+09:31:19 **** Incremental Build of configuration Debug for project Gil.Miguel.P1.Prog1.1A ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Funciones.o" "..\\src\\Funciones.c" 
+..\src\Funciones.c:15:10: fatal error: Validaciones.h: No such file or directory
+   15 | #include "Validaciones.h"
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+09:31:31 **** Incremental Build of configuration Debug for project Gil.Miguel.P1.Prog1.1A ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Gil.Miguel.P1.Prog1.1A.o" "..\\src\\Gil.Miguel.P1.Prog1.1A.c" 
+..\src\Gil.Miguel.P1.Prog1.1A.c: In function 'reemplazarCaracteres':
+..\src\Gil.Miguel.P1.Prog1.1A.c:63:21: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   63 |  for(int i = 0; i < strlen(cadena); i++)
+      |                     ^~~~~~
+..\src\Gil.Miguel.P1.Prog1.1A.c:63:21: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\Gil.Miguel.P1.Prog1.1A.c:13:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   12 | #include <stdlib.h>
+  +++ |+#include <string.h>
+   13 | 
+..\src\Gil.Miguel.P1.Prog1.1A.c:62:7: warning: unused variable 'caracterNuevo' [-Wunused-variable]
+   62 |  char caracterNuevo = caracter2;
+      |       ^~~~~~~~~~~~~
+gcc -o Gil.Miguel.P1.Prog1.1A.exe "src\\Gil.Miguel.P1.Prog1.1A.o" 
+09:31:44 **** Incremental Build of configuration Debug for project Gil.Miguel.P1.Prog1.1A ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Gil.Miguel.P1.Prog1.1A.o" "..\\src\\Gil.Miguel.P1.Prog1.1A.c" 
+..\src\Gil.Miguel.P1.Prog1.1A.c: In function 'reemplazarCaracteres':
+..\src\Gil.Miguel.P1.Prog1.1A.c:63:21: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+   63 |  for(int i = 0; i < strlen(cadena); i++)
+      |                     ^~~~~~
+..\src\Gil.Miguel.P1.Prog1.1A.c:63:21: warning: incompatible implicit declaration of built-in function 'strlen'
+..\src\Gil.Miguel.P1.Prog1.1A.c:13:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   12 | #include <stdlib.h>
+  +++ |+#include <string.h>
+   13 | 
+gcc -o Gil.Miguel.P1.Prog1.1A.exe "src\\Gil.Miguel.P1.Prog1.1A.o" 
+09:31:58 **** Incremental Build of configuration Debug for project Gil.Miguel.P1.Prog1.1A ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Gil.Miguel.P1.Prog1.1A.o" "..\\src\\Gil.Miguel.P1.Prog1.1A.c" 
+gcc -o Gil.Miguel.P1.Prog1.1A.exe "src\\Gil.Miguel.P1.Prog1.1A.o" 
+Info: Nothing to build for Gil.Miguel.P1.Prog1.1A
+09:32:29 **** Incremental Build of configuration Debug for project Gil.Miguel.P1.Prog1.1A ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Gil.Miguel.P1.Prog1.1A.o" "..\\src\\Gil.Miguel.P1.Prog1.1A.c" 
+gcc -o Gil.Miguel.P1.Prog1.1A.exe "src\\Gil.Miguel.P1.Prog1.1A.o" 
+09:32:37 **** Incremental Build of configuration Debug for project Gil.Miguel.P1.Prog1.1A ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Gil.Miguel.P1.Prog1.1A.o" "..\\src\\Gil.Miguel.P1.Prog1.1A.c" 
+gcc -o Gil.Miguel.P1.Prog1.1A.exe "src\\Gil.Miguel.P1.Prog1.1A.o" 
+09:41:08 **** Incremental Build of configuration Debug for project Gil.Miguel.P1.Prog1.1A ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Gil.Miguel.P1.Prog1.1A.o" "..\\src\\Gil.Miguel.P1.Prog1.1A.c" 
+..\src\Gil.Miguel.P1.Prog1.1A.c: In function 'main':
+..\src\Gil.Miguel.P1.Prog1.1A.c:48:10: error: array size missing in 'vacunas'
+   48 |  eVacuna vacunas[TAM];
+      |          ^~~~~~~
+..\src\Gil.Miguel.P1.Prog1.1A.c:50:48: error: expected expression before ',' token
+   50 |  ordenarVacunasPorTipoYEfectividad(vacunas, TAM, ASC);
+      |                                                ^
+09:41:20 **** Incremental Build of configuration Debug for project Gil.Miguel.P1.Prog1.1A ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Gil.Miguel.P1.Prog1.1A.o" "..\\src\\Gil.Miguel.P1.Prog1.1A.c" 
+gcc -o Gil.Miguel.P1.Prog1.1A.exe "src\\Gil.Miguel.P1.Prog1.1A.o" 
+09:45:31 **** Incremental Build of configuration Debug for project Gil.Miguel.P1.Prog1.1A ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Gil.Miguel.P1.Prog1.1A.o" "..\\src\\Gil.Miguel.P1.Prog1.1A.c" 
+gcc -o Gil.Miguel.P1.Prog1.1A.exe "src\\Gil.Miguel.P1.Prog1.1A.o" 
+09:45:47 **** Incremental Build of configuration Debug for project Gil.Miguel.P1.Prog1.1A ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Gil.Miguel.P1.Prog1.1A.o" "..\\src\\Gil.Miguel.P1.Prog1.1A.c" 
+gcc -o Gil.Miguel.P1.Prog1.1A.exe "src\\Gil.Miguel.P1.Prog1.1A.o" 
+09:53:33 **** Incremental Build of configuration Debug for project Gil.Miguel.P1.Prog1.1A ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Gil.Miguel.P1.Prog1.1A.o" "..\\src\\Gil.Miguel.P1.Prog1.1A.c" 
+gcc -o Gil.Miguel.P1.Prog1.1A.exe "src\\Gil.Miguel.P1.Prog1.1A.o" 

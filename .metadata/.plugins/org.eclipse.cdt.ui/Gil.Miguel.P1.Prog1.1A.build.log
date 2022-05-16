@@ -1,0 +1,7 @@
+09:53:33 **** Incremental Build of configuration Debug for project Gil.Miguel.P1.Prog1.1A ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Gil.Miguel.P1.Prog1.1A.o" "..\\src\\Gil.Miguel.P1.Prog1.1A.c" 
+gcc -o Gil.Miguel.P1.Prog1.1A.exe "src\\Gil.Miguel.P1.Prog1.1A.o" 
+
+09:53:33 Build Finished. 0 errors, 0 warnings. (took 532ms)
+
